@@ -9,4 +9,4 @@
 	url = /Users/shinate/workspace/SLProduction/Fox-Fire
 [submodule "Dragon-Maid-EYES"]
 	path = Dragon-Maid-EYES
-	url = /Users/shinate/workspace/SLProduction/Dragon-Maid-EYES
+	url = git@github.com:KRO-SL-Production/Dragon-Maid-EYES.git
