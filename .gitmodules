@@ -10,3 +10,7 @@ url=git@github.com:KRO-SL-Production/Fox-Fire.git
 [submodule "Dragon-Maid-EYES"]
 	path = Dragon-Maid-EYES
 	url = git@github.com:KRO-SL-Production/Dragon-Maid-EYES.git
+[submodule "Kinmokusei-s-lantern"]
+	path = Kinmokusei-s-lantern
+	url = git@github.com:KRO-SL-Production/Kinmokusei-s-lantern.git
+	branch = master
