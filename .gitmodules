@@ -7,6 +7,3 @@ url=git@github.com:KRO-SL-Production/FOX-EYES.git
 [submodule "Fox-Fire"]
 	path = Fox-Fire
 url=git@github.com:KRO-SL-Production/Fox-Fire.git
-[submodule "Dragon-Maid-EYES"]
-	path = Dragon-Maid-EYES
-	url = git@github.com:KRO-SL-Production/Dragon-Maid-EYES.git
