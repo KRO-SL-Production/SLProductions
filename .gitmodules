@@ -1,12 +1,12 @@
 [submodule "DRAGON-EYES"]
 	path = DRAGON-EYES
-	url = /Users/shinate/workspace/SLProduction/DRAGON-EYES
+url=git@github.com:KRO-SL-Production/DRAGON-EYES.git
 [submodule "FOX-EYES"]
 	path = FOX-EYES
-	url = /Users/shinate/workspace/SLProduction/FOX-EYES
+url=git@github.com:KRO-SL-Production/FOX-EYES.git
 [submodule "Fox-Fire"]
 	path = Fox-Fire
-	url = /Users/shinate/workspace/SLProduction/Fox-Fire
+url=git@github.com:KRO-SL-Production/Fox-Fire.git
 [submodule "Dragon-Maid-EYES"]
 	path = Dragon-Maid-EYES
 	url = git@github.com:KRO-SL-Production/Dragon-Maid-EYES.git
