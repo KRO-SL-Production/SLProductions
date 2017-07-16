@@ -25,14 +25,24 @@ function getProductions() {
 
 gulp.task('sync', function () {
     var type = args.f;
-    switch (type) {
-        case 'gulpfile':
-            return gulp.src('./Templates/production-directory-example/gulpfile.js')
-                .pipe(gulpMulDest(getProductions()));
-        case 'ignore':
-            return gulp.src('./Templates/production-directory-example/.gitignore')
-                .pipe(gulpMulDest(getProductions()));
+    var src = [];
+    var files = {
+        gulpfile: './Templates/production-directory-example/gulpfile.js',
+        ignore: './Templates/production-directory-example/.gitignore'
+    };
+
+    if (type && files.hasOwnProperty(type)) {
+        src.push(files[type]);
+    } else {
+        for (var type in files) {
+            if (files.hasOwnProperty(type)) {
+                src.push(files[type]);
+            }
+        }
     }
+
+    return gulp.src(src)
+        .pipe(gulpMulDest(getProductions()));
 });
 
 gulp.task('init', function () {
