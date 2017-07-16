@@ -14,3 +14,6 @@ url=git@github.com:KRO-SL-Production/Fox-Fire.git
 	path = Kinmokusei-s-lantern
 	url = git@github.com:KRO-SL-Production/Kinmokusei-s-lantern.git
 	branch = master
+[submodule "Hair-bun"]
+	path = Hair-bun
+	url = git@github.com:KRO-SL-Production/Hair-bun.git
