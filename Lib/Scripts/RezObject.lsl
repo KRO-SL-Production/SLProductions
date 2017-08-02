@@ -11,10 +11,11 @@ default
         vector myPos = llGetPos();
         rotation myRot = llGetRot();
  
-        vector rezPos = myPos+relativePosOffset*myRot;
-        vector rezVel = relativeVel*myRot;
-        rotation rezRot = relativeRot*myRot;
+        vector rezPos = myPos + relativePosOffset * myRot;
+        vector rezVel = relativeVel * myRot;
+        rotation rezRot = relativeRot * myRot;
  
         llRezObject(object, rezPos, rezVel, rezRot, startParam);
+        llRezAtRoot(object, rezPos, rezVel, rezRot, startParam);
     }
 }
