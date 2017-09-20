@@ -1,0 +1,13 @@
+{
+  "name": "sl-production",
+  "description": "SecondLife Productions",
+  "main": "gulpfile.js",
+  "authors": [
+    "kro.morror@yahoo.com"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/KRO-SL-Production/SLProductions",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
