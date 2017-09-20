@@ -20,3 +20,6 @@ url=git@github.com:KRO-SL-Production/Fox-Fire.git
 [submodule "Postal-parcels"]
 	path = Postal-parcels
 	url = git@github.com:KRO-SL-Production/Postal-parcels.git
+[submodule "Bamboo-Flute"]
+	path = Bamboo-Flute
+	url = git@github.com:KRO-SL-Production/Bamboo-Flute.git
