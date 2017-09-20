@@ -1,69 +1,69 @@
 {
   "DRAGON-EYES": {
     "name": "=[K.R.O]= DRAGON EYES for Kemono/M3A/M3V Head",
-    "head": "DRAGON-EYES/AD-Head.png",
+    "head": "productions/DRAGON-EYES/AD-Head.png",
     "preview": [
-      "DRAGON-EYES/AD-Head.png",
-      "DRAGON-EYES/AD-Preview-1.png"
+      "productions/DRAGON-EYES/AD-Head.png",
+      "productions/DRAGON-EYES/AD-Preview-1.png"
     ]
   },
   "Dragon-Maid-EYES": {
     "name": "=[K.R.O]= Fox Fire",
-    "head": "Dragon-Maid-EYES/AD-Head.png",
+    "head": "productions/Dragon-Maid-EYES/AD-Head.png",
     "preview": [
-      "Dragon-Maid-EYES/AD-Head.png"
+      "productions/Dragon-Maid-EYES/AD-Head.png"
     ]
   },
   "FOX-EYES": {
     "name": "=[K.R.O]= FOX EYES for Kemono/M3A/M3V Head",
-    "head": "FOX-EYES/AD-Head.png",
+    "head": "productions/FOX-EYES/AD-Head.png",
     "preview": [
-      "FOX-EYES/AD-Head.png",
-      "FOX-EYES/AD-Preview-1.png",
-      "FOX-EYES/AD-Preview-2.png"
-    ]
-  },
-  "Fox-Fire": {
-    "name": "=[K.R.O]= Fox Fire",
-    "head": "Fox-Fire/AD-Head.png",
-    "preview": [
-      "Fox-Fire/AD-Head-DEMO.png",
-      "Fox-Fire/AD-Head.png",
-      "Fox-Fire/AD-Preview-1.png",
-      "Fox-Fire/AD-Preview-2.png",
-      "Fox-Fire/AD-Preview-3.png",
-      "Fox-Fire/AD-Preview-4.png",
-      "Fox-Fire/AD-Preview-5.png",
-      "Fox-Fire/AD-Preview-6.png",
-      "Fox-Fire/AD-Preview-7.png",
-      "Fox-Fire/instructions-words-zh.jpg",
-      "Fox-Fire/instructions-words.png"
-    ]
-  },
-  "Kinmokusei-s-lantern": {
-    "name": "=[K.R.O]= Kinmokusei's lantern",
-    "head": "Kinmokusei-s-lantern/AD-Head.png",
-    "preview": [
-      "Kinmokusei-s-lantern/AD-Head.png",
-      "Kinmokusei-s-lantern/AD-Preview-1.png",
-      "Kinmokusei-s-lantern/AD-Preview-2.png",
-      "Kinmokusei-s-lantern/AD-Preview-3.png"
+      "productions/FOX-EYES/AD-Head.png",
+      "productions/FOX-EYES/AD-Preview-1.png",
+      "productions/FOX-EYES/AD-Preview-2.png"
     ]
   },
   "Hair-bun": {
     "name": "=[K.R.O]= Hair bun",
-    "head": "Hair-bun/AD-Head.png",
+    "head": "productions/Hair-bun/AD-Head.png",
     "preview": [
-      "Hair-bun/AD-Head.png",
-      "Hair-bun/AD-Preview-1.png",
-      "Hair-bun/AD-Preview-2.png"
+      "productions/Hair-bun/AD-Head.png",
+      "productions/Hair-bun/AD-Preview-1.png",
+      "productions/Hair-bun/AD-Preview-2.png"
+    ]
+  },
+  "Fox-Fire": {
+    "name": "=[K.R.O]= Fox Fire",
+    "head": "productions/Fox-Fire/AD-Head.png",
+    "preview": [
+      "productions/Fox-Fire/AD-Head-DEMO.png",
+      "productions/Fox-Fire/AD-Head.png",
+      "productions/Fox-Fire/AD-Preview-1.png",
+      "productions/Fox-Fire/AD-Preview-2.png",
+      "productions/Fox-Fire/AD-Preview-3.png",
+      "productions/Fox-Fire/AD-Preview-4.png",
+      "productions/Fox-Fire/AD-Preview-5.png",
+      "productions/Fox-Fire/AD-Preview-6.png",
+      "productions/Fox-Fire/AD-Preview-7.png",
+      "productions/Fox-Fire/instructions-words-zh.jpg",
+      "productions/Fox-Fire/instructions-words.png"
+    ]
+  },
+  "Kinmokusei-s-lantern": {
+    "name": "=[K.R.O]= Kinmokusei's lantern",
+    "head": "productions/Kinmokusei-s-lantern/AD-Head.png",
+    "preview": [
+      "productions/Kinmokusei-s-lantern/AD-Head.png",
+      "productions/Kinmokusei-s-lantern/AD-Preview-1.png",
+      "productions/Kinmokusei-s-lantern/AD-Preview-2.png",
+      "productions/Kinmokusei-s-lantern/AD-Preview-3.png"
     ]
   },
   "Postal-parcels": {
     "name": "=[K.R.O]= Postal parcels",
-    "head": "Postal-parcels/AD-Head.png",
+    "head": "productions/Postal-parcels/AD-Head.png",
     "preview": [
-      "Postal-parcels/AD-Head.png"
+      "productions/Postal-parcels/AD-Head.png"
     ]
   }
 }

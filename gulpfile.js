@@ -131,14 +131,14 @@ gulp.task('preview', ['preview-clean'], function () {
     return Promise.all(getProductions().map(function (path) {
         return new Promise(function (resolve, reject) {
             gulp.src(path + '/release/*.{jpg,png,gif}')
-                .pipe(gulp.dest('./docs/' + path))
+                .pipe(gulp.dest('./docs/productions/' + path))
                 .on('end', resolve);
         });
     })).then(function () {
         var previewSets = {};
-        gulp.src('./docs/*/*')
+        gulp.src('./docs/productions/*/*')
             .pipe(rename(function (p) {
-                var _p = path.join('', p.dirname, p.basename + p.extname);
+                var _p = path.join('productions', p.dirname, p.basename + p.extname);
                 if (!previewSets.hasOwnProperty(p.dirname)) {
                     previewSets[p.dirname] = {
                         name: jsonReader(p.dirname + '/package.json').description,
