@@ -23,15 +23,6 @@
       "productions/FOX-EYES/AD-Preview-2.png"
     ]
   },
-  "Hair-bun": {
-    "name": "=[K.R.O]= Hair bun",
-    "head": "productions/Hair-bun/AD-Head.png",
-    "preview": [
-      "productions/Hair-bun/AD-Head.png",
-      "productions/Hair-bun/AD-Preview-1.png",
-      "productions/Hair-bun/AD-Preview-2.png"
-    ]
-  },
   "Fox-Fire": {
     "name": "=[K.R.O]= Fox Fire",
     "head": "productions/Fox-Fire/AD-Head.png",
@@ -47,6 +38,15 @@
       "productions/Fox-Fire/AD-Preview-7.png",
       "productions/Fox-Fire/instructions-words-zh.jpg",
       "productions/Fox-Fire/instructions-words.png"
+    ]
+  },
+  "Hair-bun": {
+    "name": "=[K.R.O]= Hair bun",
+    "head": "productions/Hair-bun/AD-Head.png",
+    "preview": [
+      "productions/Hair-bun/AD-Head.png",
+      "productions/Hair-bun/AD-Preview-1.png",
+      "productions/Hair-bun/AD-Preview-2.png"
     ]
   },
   "Kinmokusei-s-lantern": {

@@ -25,3 +25,6 @@
 [submodule "Update-Server"]
 	path = Update-Server
 	url = https://github.com/KRO-SL-Production/Update-Server.git
+[submodule "marketplace-store"]
+	path = marketplace-store
+	url = https://github.com/KRO-SL-Production/marketplace-store.git

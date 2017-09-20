@@ -21,6 +21,11 @@
       "Lib"
     ]
   },
+  "preview": {
+    "ignore": [
+      "marketplace-store"
+    ]
+  },
   "version": "1.0.0",
   "description": "SecondLife Productions",
   "main": "gulpfile.js",

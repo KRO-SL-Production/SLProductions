@@ -13,19 +13,29 @@ var path = require('path');
 var mapStream = require('map-stream');
 var clean = require('gulp-clean');
 
-var ignoreDirectories = jsonReader('./package.json');
+var PACKAGE_CONFIG = jsonReader('./package.json');
+var syncIgnore = PACKAGE_CONFIG.sync.ignore;
+var previewIgnore = [].concat(syncIgnore, PACKAGE_CONFIG.preview.ignore);
 
-function getProductions() {
+function getProductions(rule) {
     var files = fs.readdirSync('./');
 
     var dests = [];
     files.forEach(function (file) {
-        if (fs.lstatSync(file).isDirectory() && file[0] != '.' && -1 == ignoreDirectories.sync.ignore.indexOf(file)) {
+        if (fs.lstatSync(file).isDirectory() && file[0] != '.' && -1 == rule.indexOf(file)) {
             dests.push(file);
         }
     });
 
     return dests;
+}
+
+function getSyncDir() {
+    return getProductions(syncIgnore);
+}
+
+function getPreviewDir() {
+    return getProductions(previewIgnore);
 }
 
 gulp.task('sync', function () {
@@ -50,7 +60,7 @@ gulp.task('sync', function () {
         .pipe(rename(function (path) {
             path.extname = '';
         }))
-        .pipe(gulpMulDest(getProductions()));
+        .pipe(gulpMulDest(getSyncDir()));
 });
 
 gulp.task('init', function (cb) {
@@ -128,7 +138,7 @@ gulp.task('preview-clean', function () {
 
 gulp.task('preview', ['preview-clean'], function () {
 
-    return Promise.all(getProductions().map(function (path) {
+    return Promise.all(getPreviewDir().map(function (path) {
         return new Promise(function (resolve, reject) {
             gulp.src(path + '/release/*.{jpg,png,gif}')
                 .pipe(gulp.dest('./docs/productions/' + path))
