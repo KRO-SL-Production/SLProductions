@@ -1,28 +1,27 @@
 [submodule "DRAGON-EYES"]
 	path = DRAGON-EYES
-url=git@github.com:KRO-SL-Production/DRAGON-EYES.git
+    url=https://github.com/KRO-SL-Production/DRAGON-EYES.git
 [submodule "FOX-EYES"]
 	path = FOX-EYES
-url=git@github.com:KRO-SL-Production/FOX-EYES.git
+    url=https://github.com/KRO-SL-Production/FOX-EYES.git
 [submodule "Fox-Fire"]
 	path = Fox-Fire
-url=git@github.com:KRO-SL-Production/Fox-Fire.git
+    url=https://github.com/KRO-SL-Production/Fox-Fire.git
 [submodule "Dragon-Maid-EYES"]
 	path = Dragon-Maid-EYES
-	url = git@github.com:KRO-SL-Production/Dragon-Maid-EYES.git
+	url = https://github.com/KRO-SL-Production/Dragon-Maid-EYES.git
 [submodule "Kinmokusei-s-lantern"]
 	path = Kinmokusei-s-lantern
-	url = git@github.com:KRO-SL-Production/Kinmokusei-s-lantern.git
-	branch = master
+	url = https://github.com/KRO-SL-Production/Kinmokusei-s-lantern.git
 [submodule "Hair-bun"]
 	path = Hair-bun
-	url = git@github.com:KRO-SL-Production/Hair-bun.git
+	url = https://github.com/KRO-SL-Production/Hair-bun.git
 [submodule "Postal-parcels"]
 	path = Postal-parcels
-	url = git@github.com:KRO-SL-Production/Postal-parcels.git
+	url = https://github.com/KRO-SL-Production/Postal-parcels.git
 [submodule "Bamboo-Flute"]
 	path = Bamboo-Flute
-	url = git@github.com:KRO-SL-Production/Bamboo-Flute.git
+    url=https://github.com/KRO-SL-Production/Bamboo-Flute.git
 [submodule "Update-Server"]
 	path = Update-Server
-	url = git@github.com:KRO-SL-Production/Update-Server.git
+	url = https://github.com/KRO-SL-Production/Update-Server.git
