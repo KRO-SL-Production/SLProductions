@@ -40,15 +40,6 @@
       "Fox-Fire/instructions-words.png"
     ]
   },
-  "Hair-bun": {
-    "name": "=[K.R.O]= Hair bun",
-    "head": "Hair-bun/AD-Head.png",
-    "preview": [
-      "Hair-bun/AD-Head.png",
-      "Hair-bun/AD-Preview-1.png",
-      "Hair-bun/AD-Preview-2.png"
-    ]
-  },
   "Kinmokusei-s-lantern": {
     "name": "=[K.R.O]= Kinmokusei's lantern",
     "head": "Kinmokusei-s-lantern/AD-Head.png",
@@ -56,8 +47,16 @@
       "Kinmokusei-s-lantern/AD-Head.png",
       "Kinmokusei-s-lantern/AD-Preview-1.png",
       "Kinmokusei-s-lantern/AD-Preview-2.png",
-      "Kinmokusei-s-lantern/AD-Preview-3.png",
-      "Kinmokusei-s-lantern/model"
+      "Kinmokusei-s-lantern/AD-Preview-3.png"
+    ]
+  },
+  "Hair-bun": {
+    "name": "=[K.R.O]= Hair bun",
+    "head": "Hair-bun/AD-Head.png",
+    "preview": [
+      "Hair-bun/AD-Head.png",
+      "Hair-bun/AD-Preview-1.png",
+      "Hair-bun/AD-Preview-2.png"
     ]
   },
   "Postal-parcels": {

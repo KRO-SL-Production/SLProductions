@@ -11,6 +11,7 @@ var jsonWriter = require('jsonfile').writeFileSync;
 var prompt = require('prompt');
 var path = require('path');
 var mapStream = require('map-stream');
+var clean = require('gulp-clean');
 
 var ignoreDirectories = jsonReader('./package.json');
 
@@ -120,11 +121,16 @@ gulp.task('init', function (cb) {
     return Promise.reject();
 });
 
-gulp.task('preview', function () {
+gulp.task('preview-clean', function () {
+    return gulp.src('./docs', {read: false})
+        .pipe(clean());
+});
+
+gulp.task('preview', ['preview-clean'], function () {
 
     return Promise.all(getProductions().map(function (path) {
         return new Promise(function (resolve, reject) {
-            gulp.src(path + '/release/**/*')
+            gulp.src(path + '/release/*.{jpg,png,gif}')
                 .pipe(gulp.dest('./docs/' + path))
                 .on('end', resolve);
         });
