@@ -23,3 +23,6 @@ url=git@github.com:KRO-SL-Production/Fox-Fire.git
 [submodule "Bamboo-Flute"]
 	path = Bamboo-Flute
 	url = git@github.com:KRO-SL-Production/Bamboo-Flute.git
+[submodule "Update-Server"]
+	path = Update-Server
+	url = git@github.com:KRO-SL-Production/Update-Server.git
