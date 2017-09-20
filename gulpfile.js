@@ -8,7 +8,7 @@ var fs = require('fs');
 var execa = require('execa');
 var jsonReader = require('jsonfile').readFileSync;
 var jsonWriter = require('jsonfile').writeFileSync;
-var prompt = require('gulp-prompt');
+var prompt = require('prompt');
 var path = require('path');
 var mapStream = require('map-stream');
 
@@ -31,8 +31,8 @@ gulp.task('sync', function () {
     var type = args.f;
     var src = [];
     var files = {
-        gulpfile: './Templates/production-directory-example/gulpfile.js',
-        ignore: './Templates/production-directory-example/.gitignore'
+        gulpfile: './Templates/production-directory-example/gulpfile.js.default',
+        ignore: './Templates/production-directory-example/.gitignore.default'
     };
 
     if (type && files.hasOwnProperty(type)) {
@@ -46,6 +46,9 @@ gulp.task('sync', function () {
     }
 
     return gulp.src(src)
+        .pipe(rename(function (path) {
+            path.extname = '';
+        }))
         .pipe(gulpMulDest(getProductions()));
 });
 
@@ -58,23 +61,48 @@ gulp.task('init', function (cb) {
             new Promise(function (resolve, reject) {
                 gulp.src([
                     './Templates/production-directory-example/**/*',
-                    './Templates/production-directory-example/.gitignore',
-                    '!./Templates/production-directory-example/package.json'
+                    '!./Templates/production-directory-example/**/.gitignore',
+                    '!./Templates/production-directory-example/*.default'
                 ])
                     .pipe(gulp.dest(dest))
-                    .pipe(prompt.prompt({
-                        type: 'input',
-                        name: 'name',
-                        message: 'What\'s the name of the production you want to create?'
-                    }, function (res) {
-                        //value is in res.task (the name option gives the key)
-                        var packageJsonContents = jsonReader('./Templates/production-directory-example/package.json');
-                        if (res.name) {
-                            packageJsonContents.description = res.name;
-                        }
-                        jsonWriter(dest + '/package.json', packageJsonContents, {spaces: '  '});
-                    }))
                     .on('end', resolve);
+            }),
+            new Promise(function (resolve, reject) {
+                gulp.src([
+                    './Templates/production-directory-example/{.gitignore,gulpfile.js}.default'
+                ])
+                    .pipe(rename(function (path) {
+                        path.extname = '';
+                    }))
+                    .pipe(gulp.dest(dest))
+                    .on('end', resolve);
+            }),
+            new Promise(function (resolve, reject) {
+                if (fs.existsSync(dest + '/package.json')) {
+                    resolve();
+                } else {
+                    prompt.start();
+                    prompt.get({
+                        properties: {
+                            name: {
+                                message: 'Production name',
+                                required: true
+                            }
+                        }
+                    }, function (err, result) {
+                        if (!err) {
+                            var packageJsonContents = jsonReader('./Templates/production-directory-example/package.json.default');
+                            if (result.name) {
+                                packageJsonContents.description = result.name;
+                            }
+                            jsonWriter(dest + '/package.json', packageJsonContents, {spaces: '  '});
+
+                            resolve();
+                        } else {
+                            reject();
+                        }
+                    });
+                }
             })
         ]).then(function () {
             console.log('Installing ...');
