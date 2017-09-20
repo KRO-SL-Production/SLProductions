@@ -17,3 +17,6 @@ url=git@github.com:KRO-SL-Production/Fox-Fire.git
 [submodule "Hair-bun"]
 	path = Hair-bun
 	url = git@github.com:KRO-SL-Production/Hair-bun.git
+[submodule "Postal-parcels"]
+	path = Postal-parcels
+	url = git@github.com:KRO-SL-Production/Postal-parcels.git
