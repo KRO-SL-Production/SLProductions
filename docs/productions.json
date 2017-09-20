@@ -59,5 +59,12 @@
       "Kinmokusei-s-lantern/AD-Preview-3.png",
       "Kinmokusei-s-lantern/model"
     ]
+  },
+  "Postal-parcels": {
+    "name": "=[K.R.O]= Postal parcels",
+    "head": "Postal-parcels/AD-Head.png",
+    "preview": [
+      "Postal-parcels/AD-Head.png"
+    ]
   }
 }
