@@ -7,6 +7,8 @@ var rename = require('gulp-rename');
 var fs = require('fs');
 var spawn = require('cross-spawn');
 var jsonReader = require('jsonfile').readFileSync;
+var jsonWriter = require('jsonfile').writeFileSync;
+var prompt = require('gulp-prompt');
 
 var ignoreDirectories = jsonReader('./package.json');
 
@@ -50,8 +52,25 @@ gulp.task('init', function () {
     var dest = args.d;
 
     if (dest && fs.lstatSync(dest).isDirectory()) {
-        return gulp.src('./Templates/production-directory-example/**/*')
-            .pipe(gulp.dest(dest));
+        return gulp.src([
+            './Templates/production-directory-example/**/*',
+            './Templates/production-directory-example/.gitignore',
+            '!./Templates/production-directory-example/package.json'
+        ])
+            .pipe(gulp.dest(dest))
+            .pipe(prompt.prompt({
+                type: 'input',
+                name: 'name',
+                message: 'What\'s the name of the production you want to create?'
+            }, function (res) {
+                //value is in res.task (the name option gives the key)
+                var packageJsonContents = jsonReader('./Templates/production-directory-example/package.json');
+                if (res.name) {
+                    packageJsonContents.name = res.name;
+                    packageJsonContents.description = res.name;
+                }
+                jsonWriter(dest + '/package.json', packageJsonContents, {spaces: '  '});
+            }));
     }
 
     console.error('Not a valid directory');

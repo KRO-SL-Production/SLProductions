@@ -5,7 +5,8 @@
     "gulp-multi-dest": "^0.0.4",
     "gulp-rename": "^1.2.2",
     "jsonfile": "^3.0.0",
-    "yargs": "^8.0.2"
+    "yargs": "^8.0.2",
+    "gulp-prompt": "^0.2.0"
   },
   "name": "sl-production",
   "scripts": {},
@@ -14,5 +15,18 @@
       "node_modules",
       "Templates"
     ]
-  }
+  },
+  "version": "1.0.0",
+  "description": "SecondLife Productions",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KRO-SL-Production/SLProductions.git"
+  },
+  "author": "kro.morror@yahoo.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KRO-SL-Production/SLProductions/issues"
+  },
+  "homepage": "https://github.com/KRO-SL-Production/SLProductions#readme"
 }
