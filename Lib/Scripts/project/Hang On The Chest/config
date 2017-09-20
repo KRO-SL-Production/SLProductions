@@ -1,0 +1,24 @@
+# CONFIG
+
+STANDING:Standing
+WALKING:Walk
+CROUCHING:luciferCrouch
+LANDING:luciferLand
+STANDUP:luciferLand
+FALLING:luciferFall
+FLYING_DOWN:luciferFlyDown
+FLYING_UP:luciferFlyUp
+FLYING:luciferFly
+HOVERING:luciferHover
+JUMPING:luciferJump
+PRE_JUMPING:luciferPreJump
+RUNNING:luciferRun
+TURNING_RIGHT:TurnRight
+TURNING_LEFT:TurnLeft
+FLOATING:luciferHover
+SWIMMING_FORWARD:luciferFly
+SWIMMING_UP:luciferFlyUp
+SWIMMING_DOWN:luciferFlyDown
+
+# Slave
+HANGUP:HangUp

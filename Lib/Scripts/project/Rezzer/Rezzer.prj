@@ -1,0 +1,8 @@
+<Project name="Rezzer" guid="7e557623-ee2b-48a6-89b4-cdf31fd8065f">
+	<Object name="Rezzer" guid="dd390ce4-8121-4421-8206-94a20db757c8">
+		<Notecard name="CONFIG" guid="1d3427b4-6e7a-4ff3-a468-14fa6743d05d">
+		</Notecard>
+		<Script name="Main.lsl" guid="e5866429-82b5-4ea3-8344-20cc594aa4d4">
+		</Script>
+	</Object>
+</Project>
