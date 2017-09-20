@@ -9,6 +9,8 @@ var execa = require('execa');
 var jsonReader = require('jsonfile').readFileSync;
 var jsonWriter = require('jsonfile').writeFileSync;
 var prompt = require('gulp-prompt');
+var path = require('path');
+var mapStream = require('map-stream');
 
 var ignoreDirectories = jsonReader('./package.json');
 
@@ -88,4 +90,39 @@ gulp.task('init', function (cb) {
 
     console.error('Not a valid directory');
     return Promise.reject();
+});
+
+gulp.task('preview', function () {
+
+    return Promise.all(getProductions().map(function (path) {
+        return new Promise(function (resolve, reject) {
+            gulp.src(path + '/release/**/*')
+                .pipe(gulp.dest('./docs/' + path))
+                .on('end', resolve);
+        });
+    })).then(function () {
+        var previewSets = {};
+        gulp.src('./docs/*/*')
+            .pipe(rename(function (p) {
+                var _p = path.join('', p.dirname, p.basename + p.extname);
+                if (!previewSets.hasOwnProperty(p.dirname)) {
+                    previewSets[p.dirname] = {
+                        name: jsonReader(p.dirname + '/package.json').description,
+                        head: null,
+                        preview: []
+                    };
+                }
+                if (p.basename == 'AD-Head') {
+                    previewSets[p.dirname].head = _p;
+                }
+                previewSets[p.dirname].preview.push(_p);
+            }))
+            .pipe(mapStream(function (file, cb) {
+                cb();
+            }))
+            .pipe(gulp.dest('./none'))
+            .on('end', function () {
+                jsonWriter('./docs/productions.json', previewSets, {spaces: '  '});
+            });
+    });
 });
