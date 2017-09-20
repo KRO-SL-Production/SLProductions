@@ -47,7 +47,7 @@ gulp.task('sync', function () {
         .pipe(gulpMulDest(getProductions()));
 });
 
-gulp.task('init', function () {
+gulp.task('copyTemplates', function () {
 
     var dest = args.d;
 
@@ -75,4 +75,9 @@ gulp.task('init', function () {
     console.error('Not a valid directory');
 
     return false;
+});
+
+gulp.task('init', ['copyTemplates'], function (cb) {
+    spawn.sync('npm', ['install'], {stdio: 'inherit'});
+    cb();
 });
