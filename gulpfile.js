@@ -66,7 +66,6 @@ gulp.task('init', function () {
                 //value is in res.task (the name option gives the key)
                 var packageJsonContents = jsonReader('./Templates/production-directory-example/package.json');
                 if (res.name) {
-                    packageJsonContents.name = res.name;
                     packageJsonContents.description = res.name;
                 }
                 jsonWriter(dest + '/package.json', packageJsonContents, {spaces: '  '});
