@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var gulpMulDest = require('gulp-multi-dest');
 var rename = require('gulp-rename');
 var fs = require('fs');
-var spawn = require('cross-spawn');
+var execa = require('execa');
 var jsonReader = require('jsonfile').readFileSync;
 var jsonWriter = require('jsonfile').writeFileSync;
 var prompt = require('gulp-prompt');
@@ -47,37 +47,45 @@ gulp.task('sync', function () {
         .pipe(gulpMulDest(getProductions()));
 });
 
-gulp.task('copyTemplates', function () {
+gulp.task('init', function (cb) {
 
     var dest = args.d;
 
     if (dest && fs.lstatSync(dest).isDirectory()) {
-        return gulp.src([
-            './Templates/production-directory-example/**/*',
-            './Templates/production-directory-example/.gitignore',
-            '!./Templates/production-directory-example/package.json'
-        ])
-            .pipe(gulp.dest(dest))
-            .pipe(prompt.prompt({
-                type: 'input',
-                name: 'name',
-                message: 'What\'s the name of the production you want to create?'
-            }, function (res) {
-                //value is in res.task (the name option gives the key)
-                var packageJsonContents = jsonReader('./Templates/production-directory-example/package.json');
-                if (res.name) {
-                    packageJsonContents.description = res.name;
-                }
-                jsonWriter(dest + '/package.json', packageJsonContents, {spaces: '  '});
-            }));
+        return Promise.all([
+            new Promise(function (resolve, reject) {
+                gulp.src([
+                    './Templates/production-directory-example/**/*',
+                    './Templates/production-directory-example/.gitignore',
+                    '!./Templates/production-directory-example/package.json'
+                ])
+                    .pipe(gulp.dest(dest))
+                    .pipe(prompt.prompt({
+                        type: 'input',
+                        name: 'name',
+                        message: 'What\'s the name of the production you want to create?'
+                    }, function (res) {
+                        //value is in res.task (the name option gives the key)
+                        var packageJsonContents = jsonReader('./Templates/production-directory-example/package.json');
+                        if (res.name) {
+                            packageJsonContents.description = res.name;
+                        }
+                        jsonWriter(dest + '/package.json', packageJsonContents, {spaces: '  '});
+                    }))
+                    .on('end', resolve);
+            })
+        ]).then(function () {
+            console.log('Installing ...');
+            var npm = 'cnpm';
+            try {
+                execa.shellSync(npm + ' -v');
+            } catch (e) {
+                npm = 'npm';
+            }
+            execa.shellSync(['pushd ' + dest, npm + ' install', 'popd'].join(';'));
+        });
     }
 
     console.error('Not a valid directory');
-
-    return false;
-});
-
-gulp.task('init', ['copyTemplates'], function (cb) {
-    spawn.sync('npm', ['install'], {stdio: 'inherit'});
-    cb();
+    return Promise.reject();
 });
