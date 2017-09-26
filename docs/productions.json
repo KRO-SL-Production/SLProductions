@@ -3,22 +3,18 @@
     "name": "=[K.R.O]= DRAGON EYES for Kemono/M3A/M3V Head",
     "head": "productions/DRAGON-EYES/AD-Head.png",
     "preview": [
-      "productions/DRAGON-EYES/AD-Head.png",
       "productions/DRAGON-EYES/AD-Preview-1.png"
     ]
   },
   "Dragon-Maid-EYES": {
     "name": "=[K.R.O]= Fox Fire",
     "head": "productions/Dragon-Maid-EYES/AD-Head.png",
-    "preview": [
-      "productions/Dragon-Maid-EYES/AD-Head.png"
-    ]
+    "preview": []
   },
   "FOX-EYES": {
     "name": "=[K.R.O]= FOX EYES for Kemono/M3A/M3V Head",
     "head": "productions/FOX-EYES/AD-Head.png",
     "preview": [
-      "productions/FOX-EYES/AD-Head.png",
       "productions/FOX-EYES/AD-Preview-1.png",
       "productions/FOX-EYES/AD-Preview-2.png"
     ]
@@ -28,7 +24,6 @@
     "head": "productions/Fox-Fire/AD-Head.png",
     "preview": [
       "productions/Fox-Fire/AD-Head-DEMO.png",
-      "productions/Fox-Fire/AD-Head.png",
       "productions/Fox-Fire/AD-Preview-1.png",
       "productions/Fox-Fire/AD-Preview-2.png",
       "productions/Fox-Fire/AD-Preview-3.png",
@@ -44,7 +39,6 @@
     "name": "=[K.R.O]= Hair bun",
     "head": "productions/Hair-bun/AD-Head.png",
     "preview": [
-      "productions/Hair-bun/AD-Head.png",
       "productions/Hair-bun/AD-Preview-1.png",
       "productions/Hair-bun/AD-Preview-2.png"
     ]
@@ -53,7 +47,6 @@
     "name": "=[K.R.O]= Kinmokusei's lantern",
     "head": "productions/Kinmokusei-s-lantern/AD-Head.png",
     "preview": [
-      "productions/Kinmokusei-s-lantern/AD-Head.png",
       "productions/Kinmokusei-s-lantern/AD-Preview-1.png",
       "productions/Kinmokusei-s-lantern/AD-Preview-2.png",
       "productions/Kinmokusei-s-lantern/AD-Preview-3.png"
@@ -62,8 +55,6 @@
   "Postal-parcels": {
     "name": "=[K.R.O]= Postal parcels",
     "head": "productions/Postal-parcels/AD-Head.png",
-    "preview": [
-      "productions/Postal-parcels/AD-Head.png"
-    ]
+    "preview": []
   }
 }

@@ -12,6 +12,7 @@ var prompt = require('prompt');
 var path = require('path');
 var mapStream = require('map-stream');
 var clean = require('gulp-clean');
+var spawn = require('cross-spawn');
 
 var PACKAGE_CONFIG = jsonReader('./package.json');
 var syncIgnore = PACKAGE_CONFIG.sync.ignore;
@@ -158,8 +159,9 @@ gulp.task('preview', ['preview-clean'], function () {
                 }
                 if (p.basename == 'AD-Head') {
                     previewSets[p.dirname].head = _p;
+                } else {
+                    previewSets[p.dirname].preview.push(_p);
                 }
-                previewSets[p.dirname].preview.push(_p);
             }))
             .pipe(mapStream(function (file, cb) {
                 cb();
@@ -169,4 +171,11 @@ gulp.task('preview', ['preview-clean'], function () {
                 jsonWriter('./docs/productions.json', previewSets, {spaces: '  '});
             });
     });
+});
+
+gulp.task('save', function (cb) {
+    spawn.sync('git', ['add', '.'], {stdio: 'inherit'});
+    spawn.sync('git', ['commit', '-m', 'update'], {stdio: 'inherit'});
+    spawn.sync('git', ['push', 'origin', 'master:master'], {stdio: 'inherit'});
+    cb();
 });
