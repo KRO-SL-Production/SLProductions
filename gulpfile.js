@@ -149,7 +149,7 @@ gulp.task('preview', ['preview-clean'], function () {
         var previewSets = {};
         gulp.src('./docs/productions/*/*')
             .pipe(rename(function (p) {
-                var _p = path.join('productions', p.dirname, p.basename + p.extname);
+                var _p = path.join('productions', p.dirname, p.basename + p.extname).split(path.sep).join('/');
                 if (!previewSets.hasOwnProperty(p.dirname)) {
                     previewSets[p.dirname] = {
                         name: jsonReader(p.dirname + '/package.json').description,
