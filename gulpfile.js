@@ -179,3 +179,17 @@ gulp.task('save', function (cb) {
     spawn.sync('git', ['push', 'origin', 'master:master'], {stdio: 'inherit'});
     cb();
 });
+
+gulp.task('build', ['build:js', 'build:css', 'build:static']);
+
+gulp.task('build:js', function(){
+    return Promise.relsove;
+});
+
+gulp.task('build:css', function(){
+    return Promise.relsove;
+});
+
+gulp.task('build:static', function(){
+    return Promise.relsove;
+});
