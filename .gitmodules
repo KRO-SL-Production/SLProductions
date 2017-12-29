@@ -28,3 +28,6 @@
 [submodule "marketplace-store"]
 	path = marketplace-store
 	url = https://github.com/KRO-SL-Production/marketplace-store.git
+[submodule "Tokisaki-Kurumi-EYES"]
+	path = Tokisaki-Kurumi-EYES
+	url = https://github.com/KRO-SL-Production/Tokisaki-Kurumi-EYES.git
