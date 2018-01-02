@@ -1,7 +1,7 @@
 {
   "devDependencies": {
-    "execa": "^0.8.0",
     "cross-spawn": "^5.1.0",
+    "execa": "^0.8.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-multi-dest": "^0.0.4",
@@ -19,6 +19,7 @@
   "sync": {
     "ignore": [
       "node_modules",
+      "bower_components",
       "Templates",
       "docs",
       "Lib"

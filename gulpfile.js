@@ -39,7 +39,18 @@ function getPreviewDir() {
     return getProductions(previewIgnore);
 }
 
-gulp.task('sync', function () {
+gulp.task('sync:dependencies', function () {
+    var defaultConfig = jsonReader('./Templates/production-directory-example/package.json.default');
+    getSyncDir().forEach(function (dir) {
+        var config = jsonReader(dir + '/package.json');
+        config.devDependencies = defaultConfig.devDependencies;
+        jsonWriter(dir + '/package.json', config, {spaces: 2});
+    });
+
+    return Promise.resolve;
+});
+
+gulp.task('sync', ['sync:dependencies'], function () {
     var type = args.f;
     var src = [];
     var files = {
@@ -182,14 +193,14 @@ gulp.task('save', function (cb) {
 
 gulp.task('build', ['build:js', 'build:css', 'build:static']);
 
-gulp.task('build:js', function(){
+gulp.task('build:js', function () {
     return Promise.relsove;
 });
 
-gulp.task('build:css', function(){
+gulp.task('build:css', function () {
     return Promise.relsove;
 });
 
-gulp.task('build:static', function(){
+gulp.task('build:static', function () {
     return Promise.relsove;
 });
