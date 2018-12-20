@@ -55,7 +55,7 @@ gulp.task('sync', ['sync:dependencies'], function () {
     var src = [];
     var files = {
         gulpfile: './Templates/production-directory-example/gulpfile.js.default',
-        ignore: './Templates/production-directory-example/.gitignore.default'
+        ignore  : './Templates/production-directory-example/.gitignore.default'
     };
 
     if (type && files.hasOwnProperty(type)) {
@@ -108,7 +108,7 @@ gulp.task('init', function (cb) {
                     prompt.get({
                         properties: {
                             name: {
-                                message: 'Production name',
+                                message : 'Production name',
                                 required: true
                             }
                         }
@@ -129,18 +129,18 @@ gulp.task('init', function (cb) {
             })
         ]).then(function () {
             console.log('Installing ...');
-            var npm = 'cnpm';
-            try {
-                execa.shellSync(npm + ' -v');
-            } catch (e) {
-                npm = 'npm';
-            }
-            execa.shellSync(['pushd ' + dest, npm + ' install', 'popd'].join(';'));
+            // var npm = 'cnpm';
+            // try {
+            //     execa.shellSync(npm + ' -v');
+            // } catch (e) {
+            //     npm = 'npm';
+            // }
+            // execa.shellSync(['pushd ' + dest, npm + ' install', 'popd'].join(';'));
         });
     }
 
     console.error('Not a valid directory');
-    return Promise.reject();
+    return Promise.reject;
 });
 
 gulp.task('preview-clean', function () {
@@ -163,8 +163,8 @@ gulp.task('preview', ['preview-clean'], function () {
                 var _p = path.join('productions', p.dirname, p.basename + p.extname).split(path.sep).join('/');
                 if (!previewSets.hasOwnProperty(p.dirname)) {
                     previewSets[p.dirname] = {
-                        name: jsonReader(p.dirname + '/package.json').description,
-                        head: null,
+                        name   : jsonReader(p.dirname + '/package.json').description,
+                        head   : null,
                         preview: []
                     };
                 }
