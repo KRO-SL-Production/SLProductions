@@ -19,6 +19,14 @@
       "productions/FOX-EYES/AD-Preview-2.png"
     ]
   },
+  "Hair-bun": {
+    "name": "=[K.R.O]= Hair bun",
+    "head": "productions/Hair-bun/AD-Head.png",
+    "preview": [
+      "productions/Hair-bun/AD-Preview-1.png",
+      "productions/Hair-bun/AD-Preview-2.png"
+    ]
+  },
   "Fox-Fire": {
     "name": "=[K.R.O]= Fox Fire",
     "head": "productions/Fox-Fire/AD-Head.png",
@@ -35,14 +43,6 @@
       "productions/Fox-Fire/instructions-words.png"
     ]
   },
-  "Hair-bun": {
-    "name": "=[K.R.O]= Hair bun",
-    "head": "productions/Hair-bun/AD-Head.png",
-    "preview": [
-      "productions/Hair-bun/AD-Preview-1.png",
-      "productions/Hair-bun/AD-Preview-2.png"
-    ]
-  },
   "Kinmokusei-s-lantern": {
     "name": "=[K.R.O]= Kinmokusei's lantern",
     "head": "productions/Kinmokusei-s-lantern/AD-Head.png",
@@ -55,6 +55,11 @@
   "Postal-parcels": {
     "name": "=[K.R.O]= Postal parcels",
     "head": "productions/Postal-parcels/AD-Head.png",
+    "preview": []
+  },
+  "Tokisaki-Kurumi-EYES": {
+    "name": "=[K.R.O]= Tokisaki Kurumi EYES for Kemono/M3(V) Head",
+    "head": "productions/Tokisaki-Kurumi-EYES/AD-Head.png",
     "preview": []
   }
 }
